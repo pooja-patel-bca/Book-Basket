@@ -1,0 +1,388 @@
+
+.my-library-page {
+  width: 100%;
+  padding: 10px 5px 35px;
+  color: #453641;
+}
+
+/* Heading */
+.library-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.library-subtitle {
+  color: #c47d83;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.library-heading h1 {
+  font-size: 30px;
+  margin: 8px 0;
+  color: #453641;
+}
+
+.library-heading p {
+  color: #91808a;
+  font-size: 14px;
+  margin: 0;
+}
+
+.library-heading-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fce9e5;
+  color: #d58b91;
+  border-radius: 18px;
+}
+
+/* Statistics */
+.library-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.library-stat-card {
+  padding: 20px;
+  background: #fffaf6;
+  border: 1px solid #f1e7e1;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(105, 75, 70, 0.04);
+}
+
+.library-stat-card span {
+  color: #95828d;
+  font-size: 13px;
+}
+
+.library-stat-card h2 {
+  color: #554451;
+  font-size: 27px;
+  margin: 10px 0 0;
+}
+
+/* Search */
+.library-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 17px;
+  background: #ffffff;
+  border: 1px solid #eee2dc;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.library-search svg {
+  color: #b18e9a;
+}
+
+.library-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #51434d;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* Filters */
+.library-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.library-filters button {
+  padding: 10px 17px;
+  background: #ffffff;
+  color: #887682;
+  border: 1px solid #eee2dc;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.library-filters button:hover,
+.library-filters button.selected {
+  background: #d9898e;
+  color: #ffffff;
+  border-color: #d9898e;
+}
+
+/* Messages */
+.library-message,
+.library-error {
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.library-message {
+  background: #e8f5eb;
+  color: #387b4b;
+}
+
+.library-error {
+  background: #fde9e8;
+  color: #b94b4b;
+}
+
+/* Book Grid */
+.my-library-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.my-library-card {
+  overflow: hidden;
+  background: #fffaf6;
+  border: 1px solid #f0e5df;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(105, 75, 70, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-library-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(105, 75, 70, 0.10);
+}
+
+/* Cover */
+.my-library-cover {
+  height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #f8eee8;
+}
+
+.my-library-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 7px;
+}
+
+.library-favourite {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #b78c95;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.library-favourite.active {
+  color: #d45e70;
+  background: #fce2e5;
+}
+
+/* Book Information */
+.my-library-info {
+  padding: 17px;
+}
+
+.my-library-info h3 {
+  color: #51404c;
+  font-size: 16px;
+  margin: 0 0 7px;
+}
+
+.my-library-info > p {
+  color: #9a8490;
+  font-size: 12px;
+  margin: 0 0 17px;
+}
+
+.my-library-info label {
+  display: block;
+  color: #8a7480;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.my-library-info select {
+  width: 100%;
+  padding: 10px;
+  color: #65515e;
+  background: #ffffff;
+  border: 1px solid #eadbdc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Actions */
+.my-library-actions {
+  display: flex;
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.my-library-actions button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 7px;
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.library-view-btn {
+  background: #e9e4f5;
+  color: #78678f;
+}
+
+.library-view-btn:hover {
+  background: #dcd3ed;
+}
+
+.library-remove-btn {
+  background: #fce9e5;
+  color: #c8757c;
+}
+
+.library-remove-btn:hover {
+  background: #f7d9d5;
+}
+
+/* Loading */
+.library-status {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #8d7884;
+}
+
+.loading-icon {
+  animation: library-loading 1s linear infinite;
+}
+
+@keyframes library-loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty State */
+.library-empty {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  background: #fffaf6;
+  border: 1px dashed #e8d6d0;
+  border-radius: 18px;
+}
+
+.library-empty > span {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.library-empty h3 {
+  color: #594653;
+  font-size: 19px;
+  margin: 0 0 8px;
+}
+
+.library-empty p {
+  color: #998692;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.library-empty button {
+  padding: 11px 20px;
+  background: #d9898e;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.library-empty button:hover {
+  background: #c76f78;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .my-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .library-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .library-heading h1 {
+    font-size: 25px;
+  }
+
+  .my-library-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .library-stats {
+    gap: 10px;
+  }
+
+  .library-stat-card {
+    padding: 15px;
+  }
+
+  .library-stat-card h2 {
+    font-size: 23px;
+  }
+
+  .library-filters {
+    gap: 7px;
+  }
+
+  .library-filters button {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+}

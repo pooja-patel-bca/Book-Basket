@@ -1,0 +1,30 @@
+.main-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fffaf5;
+}
+
+.main-layout-body {
+  flex: 1;
+  display: flex;
+  min-height: calc(100vh - 75px);
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 25px 30px;
+  overflow-x: hidden;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .main-layout-body {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 20px 15px;
+  }
+}
