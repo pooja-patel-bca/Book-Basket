@@ -1,0 +1,386 @@
+
+.explore-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 28px;
+  color: #403630;
+}
+
+/* Heading */
+.explore-heading {
+  margin-bottom: 25px;
+}
+
+.explore-subtitle {
+  display: inline-block;
+  color: #b27668;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
+}
+
+.explore-heading h1 {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  color: #46352f;
+  margin: 0 0 10px;
+}
+
+.explore-heading p {
+  font-size: 14px;
+  color: #887a73;
+  margin: 0;
+}
+
+/* Search */
+.explore-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  background: #fff;
+  border: 1px solid #eee3dc;
+  border-radius: 15px;
+  margin-bottom: 28px;
+  color: #a77b6f;
+  box-shadow: 0 4px 15px rgba(75, 54, 43, 0.04);
+}
+
+.explore-search:focus-within {
+  border-color: #d9a99b;
+  box-shadow: 0 0 0 3px rgba(217, 169, 155, 0.13);
+}
+
+.explore-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #403630;
+}
+
+.explore-search input::placeholder {
+  color: #b2a59e;
+}
+
+.explore-search button {
+  border: none;
+  background: #f8e8e1;
+  color: #a66e60;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Category Filters */
+.explore-filters {
+  margin-bottom: 30px;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.filter-heading svg {
+  color: #b77b6c;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-filters button {
+  padding: 10px 17px;
+  border: 1px solid #eee3dc;
+  border-radius: 30px;
+  background: #fff;
+  color: #786a63;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-filters button:hover {
+  border-color: #d6a193;
+  background: #fff4ee;
+}
+
+.category-filters button.selected {
+  background: #bd796b;
+  border-color: #bd796b;
+  color: #fff;
+}
+
+/* Results Heading */
+.explore-results-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.explore-results-heading h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  margin: 0;
+  color: #46352f;
+}
+
+.explore-results-heading span {
+  color: #97877f;
+  font-size: 12px;
+}
+
+/* Book Grid */
+.explore-books-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.explore-book-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #f0e7e1;
+  border-radius: 17px;
+  box-shadow: 0 4px 16px rgba(75, 54, 43, 0.04);
+  transition: 0.25s;
+}
+
+.explore-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(75, 54, 43, 0.09);
+}
+
+.explore-book-cover {
+  height: 225px;
+  padding: 15px;
+  background: #f8f0e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-book-cover img {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.13);
+}
+
+.explore-book-info {
+  padding: 15px;
+}
+
+.explore-book-info h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  margin: 0 0 7px;
+  color: #453832;
+}
+
+.explore-book-info p {
+  font-size: 12px;
+  color: #96867e;
+  margin: 0 0 15px;
+  min-height: 17px;
+}
+
+.explore-book-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.explore-book-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.details-button {
+  flex: 1;
+  border: 1px solid #e8d8cf;
+  background: #fff;
+  color: #956b5f;
+}
+
+.details-button:hover {
+  background: #fff4ee;
+}
+
+.add-book-button {
+  flex: 1;
+  border: 1px solid #bd796b;
+  background: #bd796b;
+  color: white;
+}
+
+.add-book-button:hover {
+  background: #a96558;
+}
+
+.add-book-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.explore-message,
+.explore-error {
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 13px;
+}
+
+.explore-message {
+  background: #e4f3e8;
+  color: #386b4b;
+}
+
+.explore-error {
+  background: #ffebe6;
+  color: #a34f43;
+}
+
+/* Loading */
+.explore-status {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #a77b6f;
+}
+
+.loading-icon {
+  animation: explore-spin 1s linear infinite;
+}
+
+@keyframes explore-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty State */
+.explore-empty {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  background: #fff9f4;
+  border: 1px dashed #ead8cd;
+  border-radius: 18px;
+}
+
+.explore-empty span {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.explore-empty h3 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+  color: #59443a;
+}
+
+.explore-empty p {
+  font-size: 13px;
+  color: #96867e;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .explore-books-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-page {
+    padding: 18px;
+  }
+
+  .explore-books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .explore-book-cover {
+    height: 190px;
+  }
+
+  .explore-heading h1 {
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 480px) {
+  .explore-page {
+    padding: 14px;
+  }
+
+  .explore-books-grid {
+    gap: 10px;
+  }
+
+  .explore-book-cover {
+    height: 155px;
+    padding: 10px;
+  }
+
+  .explore-book-info {
+    padding: 11px;
+  }
+
+  .explore-book-info h3 {
+    font-size: 13px;
+  }
+
+  .explore-book-actions {
+    flex-direction: column;
+  }
+
+  .explore-results-heading h2 {
+    font-size: 19px;
+  }
+
+  .category-filters {
+    gap: 7px;
+  }
+
+  .category-filters button {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+}
