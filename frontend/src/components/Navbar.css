@@ -5,8 +5,15 @@
   justify-content: space-between;
   gap: 25px;
   padding: 0 30px;
-  background: #ffffff;
-  border-bottom: 1px solid #f0e5dc;
+
+  /* Glass Effect */
+  background: rgba(255, 250, 245, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(200, 117, 89, 0.16);
+  box-shadow: 0 4px 20px rgba(80, 55, 40, 0.06);
+
   position: sticky;
   top: 0;
   z-index: 100;
@@ -39,8 +46,8 @@
   align-items: center;
   gap: 12px;
   padding: 11px 15px;
-  background: #fffaf5;
-  border: 1px solid #f0e5dc;
+  background: rgba(255, 250, 245, 0.75);
+  border: 1px solid rgba(240, 229, 220, 0.9);
   border-radius: 12px;
   color: #a18c80;
 }
@@ -93,6 +100,8 @@
 .navbar-profile svg {
   color: #c87559;
 }
+
+/* Responsive Design */
 
 @media (max-width: 768px) {
   .navbar {

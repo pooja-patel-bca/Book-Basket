@@ -1,11 +1,13 @@
 
 import { Link } from "react-router-dom";
+import BlurText from "../components/BlurText";
 import "./Home.css";
 
 const Home = () => {
     return (
         <main className="home-page">
-            {/* Library Background */}
+
+            {/* Background Video */}
             <video
                 className="home-background"
                 autoPlay
@@ -30,6 +32,7 @@ const Home = () => {
                     <Link to="/login" className="nav-login">
                         Login
                     </Link>
+
                     <Link to="/register" className="nav-register">
                         Get Started
                     </Link>
@@ -38,13 +41,42 @@ const Home = () => {
 
             {/* Hero Section */}
             <section className="home-hero">
-                <p className="home-eyebrow">A WORLD OF STORIES AWAITS</p>
 
-                <h1>
-                    Discover Your
-                    <br />
-                    Next <span>Favourite Book.</span>
-                </h1>
+                <p className="home-eyebrow">
+                    A WORLD OF STORIES AWAITS
+                </p>
+
+                <div className="home-heading" role="heading" aria-level="1">
+
+                    <BlurText
+                        text="Discover Your"
+                        delay={150}
+                        animateBy="words"
+                        direction="top"
+                        stepDuration={0.4}
+                        blur={8}
+                        distance={35}
+                        effect="blur"
+                        trigger="load"
+                        className="home-blur-text"
+                    />
+
+                    <div className="home-favourite-text">
+                        <BlurText
+                            text="Next Favourite Book."
+                            delay={150}
+                            animateBy="words"
+                            direction="top"
+                            stepDuration={0.4}
+                            blur={8}
+                            distance={35}
+                            effect="blur"
+                            trigger="load"
+                            className="home-blur-text"
+                        />
+                    </div>
+
+                </div>
 
                 <p className="home-description">
                     Explore stories, discover new knowledge, and build
@@ -57,13 +89,17 @@ const Home = () => {
                     <span>→</span>
                 </Link>
 
-                <p className="home-note">DISCOVER · READ · COLLECT</p>
+                <p className="home-note">
+                    DISCOVER · READ · COLLECT
+                </p>
+
             </section>
 
             {/* Footer */}
             <footer className="home-footer">
                 <p>© 2026 Book Basket. A place for every story.</p>
             </footer>
+
         </main>
     );
 };

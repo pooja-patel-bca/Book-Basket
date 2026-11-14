@@ -1,0 +1,32 @@
+.blur-text {
+    display: inline;
+    position: relative;
+}
+
+.blur-word {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(30px);
+    will-change: transform, filter, opacity;
+
+    transition:
+        opacity 0.9s ease,
+        filter 0.9s ease,
+        transform 0.9s ease;
+}
+
+.blur-word.blur-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .blur-word {
+        opacity: 1;
+        filter: none;
+        transform: none;
+        transition: none;
+    }
+}

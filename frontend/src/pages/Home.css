@@ -122,29 +122,51 @@
     padding: 50px 20px 70px;
 }
 
+/* Eyebrow Text */
 .home-eyebrow {
     color: #e8c77d;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 5px;
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 }
 
-.home-hero h1 {
+/* Main Heading */
+.home-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Playfair Display', serif;
     font-size: clamp(42px, 6.5vw, 82px);
     font-weight: 600;
     line-height: 1.12;
     letter-spacing: -1.5px;
-    margin: 0;
     text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
-.home-hero h1 span {
+/* BlurText Component */
+.home-blur-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: max-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    text-align: center;
+}
+
+/* Second Heading Line */
+.home-favourite-text {
     color: #e8c77d;
     font-style: italic;
 }
 
+/* Description */
 .home-description {
     max-width: 590px;
     margin: 28px auto 35px;
@@ -153,6 +175,7 @@
     line-height: 1.9;
 }
 
+/* Explore Button */
 .home-cta {
     display: inline-flex;
     align-items: center;
@@ -173,8 +196,9 @@
     line-height: 12px;
 }
 
+/* Bottom Note */
 .home-note {
-    margin-top: 45px;
+    margin: 45px 0 0;
     color: rgba(255, 255, 255, 0.7);
     font-size: 10px;
     letter-spacing: 4px;
@@ -215,6 +239,7 @@
 
     .home-hero {
         min-height: 570px;
+        padding: 40px 16px 55px;
     }
 
     .home-eyebrow {
@@ -222,12 +247,18 @@
         letter-spacing: 3px;
     }
 
-    .home-hero h1 {
+    .home-heading {
         font-size: 43px;
+        letter-spacing: -1px;
     }
 
     .home-description {
         font-size: 14px;
         max-width: 340px;
+    }
+
+    .home-note {
+        font-size: 9px;
+        letter-spacing: 3px;
     }
 }
