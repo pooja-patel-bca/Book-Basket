@@ -1,3 +1,4 @@
+
 import {
   LayoutDashboard,
   Compass,
@@ -10,14 +11,14 @@ import {
 import "./Sidebar.css";
 
 const menuItems = [
-  { label: "Dashboard", icon: LayoutDashboard, path: "/" },
+  { label: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
   { label: "Explore Books", icon: Compass, path: "/explore" },
   { label: "My Library", icon: Library, path: "/my-library" },
   { label: "Favourites", icon: Heart, path: "/favourites" },
   { label: "My Profile", icon: UserRound, path: "/profile" },
 ];
 
-const Sidebar = ({ activePath = "/", onNavigate, onLogout }) => {
+const Sidebar = ({ activePath = "/dashboard", onNavigate, onLogout }) => {
   return (
     <aside className="sidebar">
       <div className="sidebar-heading">

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
 
+import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import ExploreBooks from "./pages/ExploreBooks";
 import BookDetails from "./pages/BookDetails";
@@ -25,7 +26,10 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public pages */}
+        {/* Public homepage */}
+        <Route path="/" element={<Home />} />
+
+        {/* Public authentication pages */}
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/verify-otp" element={<VerifyOTP />} />
@@ -38,7 +42,7 @@ const App = () => {
             </ProtectedRoute>
           }
         >
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/explore" element={<ExploreBooks />} />
           <Route path="/book/:id" element={<BookDetails />} />
           <Route path="/my-library" element={<MyLibrary />} />

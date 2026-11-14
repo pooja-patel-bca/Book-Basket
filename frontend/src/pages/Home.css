@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #061a24;
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background Video */
+.home-background {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Dark Overlay */
+.home-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg,
+            rgba(3, 12, 18, 0.78),
+            rgba(3, 12, 18, 0.48),
+            rgba(3, 12, 18, 0.72));
+    pointer-events: none;
+}
+
+/* Navigation */
+.home-navbar {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.logo-icon {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d8b56d;
+    color: #e8c77d;
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+}
+
+.home-navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-login,
+.nav-register {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-login {
+    color: #ffffff;
+}
+
+.nav-login:hover {
+    color: #e8c77d;
+}
+
+.nav-register {
+    color: #101820;
+    background: #e8c77d;
+    padding: 12px 23px;
+    border-radius: 4px;
+}
+
+.nav-register:hover,
+.home-cta:hover {
+    background: #f4d99b;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.home-hero {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px 70px;
+}
+
+.home-eyebrow {
+    color: #e8c77d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.home-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6.5vw, 82px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin: 0;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero h1 span {
+    color: #e8c77d;
+    font-style: italic;
+}
+
+.home-description {
+    max-width: 590px;
+    margin: 28px auto 35px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.home-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    padding: 16px 29px;
+    background: #e8c77d;
+    color: #101820;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.home-cta span {
+    font-size: 20px;
+    line-height: 12px;
+}
+
+.home-note {
+    margin-top: 45px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+/* Footer */
+.home-footer {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+.home-footer p {
+    margin: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .home-navbar {
+        padding: 20px 5%;
+    }
+
+    .home-logo {
+        font-size: 18px;
+    }
+
+    .home-navbar nav {
+        gap: 15px;
+    }
+
+    .nav-register {
+        padding: 10px 14px;
+    }
+
+    .home-hero {
+        min-height: 570px;
+    }
+
+    .home-eyebrow {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .home-hero h1 {
+        font-size: 43px;
+    }
+
+    .home-description {
+        font-size: 14px;
+        max-width: 340px;
+    }
+}
